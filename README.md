@@ -30,9 +30,10 @@ TODO:
   
         make
 	
-  + run
-     export LD_LIBRARY_PATH=/usr/local/lib
-    ./test
+  * run
+    
+        export LD_LIBRARY_PATH=/usr/local/lib
+        ./test
 
 ### Dependencies
 
