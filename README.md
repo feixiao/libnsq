@@ -26,11 +26,11 @@ TODO:
         make 
         make install
 
-  * [libnsq](https://github.com/nsqio/libnsq)
+ * [libnsq](https://github.com/nsqio/libnsq)
   
         make
 	
-  * run
+ * run
     
         export LD_LIBRARY_PATH=/usr/local/lib
         ./test
