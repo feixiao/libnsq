@@ -20,5 +20,5 @@ TODO:
  * [libevbuffsock][3]
 
 [1]: https://github.com/bitly/nsq
-[2]: http://software.schmorp.de/
+[2]: http://software.schmorp.de/pkg/libev.html
 [3]: https://github.com/mreiferson/libevbuffsock
