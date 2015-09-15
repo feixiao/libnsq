@@ -14,6 +14,26 @@ TODO:
  * feature negotiation
  * better abstractions for responding to messages in your handlers
 
+### Build
+ * [libev](http://dist.schmorp.de/libev/)
+        
+        ./configure
+        make 
+        sudo make install
+
+ * [libevbuffsock](https://github.com/mreiferson/libevbuffsock)
+   
+        make 
+        make install
+
+  * [libnsq](https://github.com/nsqio/libnsq)
+  
+        make
+	
+  + run
+     export LD_LIBRARY_PATH=/usr/local/lib
+    ./test
+
 ### Dependencies
 
  * [libev][2]
