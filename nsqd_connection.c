@@ -63,7 +63,7 @@ static void nsqd_connection_read_data(struct BufferedSocket *buffsock, void *arg
                 buffer_reset(conn->command_buf);
                 nsq_nop(conn->command_buf);
                 buffered_socket_write_buffer(conn->bs, conn->command_buf);
-                return;
+                //return;
             }
             break;
         case NSQ_FRAME_TYPE_MESSAGE:
