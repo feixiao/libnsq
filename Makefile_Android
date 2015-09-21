@@ -1,0 +1,36 @@
+include ./config.mk
+
+#-DDEBUG
+CFLAGS = $(INC) -g -Wall -O2  -fPIC
+LIBS += $(LIBDIR)/libev.a
+LIBS += $(LIBDIR)/libevbuffsock.a
+LIBS += $(LIBDIR)/libcurl.a
+LIBS += $(LIBDIR)/libjson-c.a
+LIBS += $(LIBDIR)/libz.a
+LIBS += $(PALTFORM)/lib/libm.a
+
+all: libnsq test
+
+libnsq: libnsq.a
+
+%.o: %.c
+	$(CC) -o $@ -c $< $(CFLAGS)
+
+libnsq.a: command.o reader.o nsqd_connection.o http.o message.o nsqlookupd.o
+	$(AR) $(AR_FLAGS) $@ $^
+	$(RANLIB) $@
+
+test: test.o libnsq.a $(LIBS)
+#	$(CC) -o $@ $^ $(LIBS)
+	$(CC) -o $@ $^ 	
+
+clean:
+	rm -rf libnsq.a test test.dSYM *.o
+
+.PHONY: install clean all
+
+install:
+	install -m 755 -d ${DESTDIR}${INCDIR}
+	install -m 755 -d ${DESTDIR}${LIBDIR}
+	install -m 755 libnsq.a ${DESTDIR}${LIBDIR}/libnsq.a
+	install -m 755 nsq.h ${DESTDIR}${INCDIR}/nsq.h
