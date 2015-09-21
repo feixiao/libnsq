@@ -14,7 +14,7 @@ TODO:
  * feature negotiation
  * better abstractions for responding to messages in your handlers
 
-### Build
+### Build for ubuntu
  * [libev](http://dist.schmorp.de/libev/)
         
         ./configure
@@ -34,6 +34,8 @@ TODO:
     
         export LD_LIBRARY_PATH=/usr/local/lib
         ./test
+
+### [Build for Android](http://narutoinfo.github.io/articles/libnsq-for-android.html)
 
 ### Dependencies
 
