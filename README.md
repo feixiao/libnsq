@@ -35,7 +35,7 @@ TODO:
         export LD_LIBRARY_PATH=/usr/local/lib
         ./test
 
-### [Build for Android](http://narutoinfo.github.io/articles/libnsq-for-android.html)
+### [Build for Android](http://feixiao.github.io/articles/libnsq-for-android.html)
 
 ### Dependencies
 
